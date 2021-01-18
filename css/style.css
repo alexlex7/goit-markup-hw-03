@@ -1,8 +1,10 @@
+/* =================== Палитра цветов =================== */
 /*основной цвет текста #757575; */
 /*вторичный цвет текста #212121; */
 /*белый #FFFFFF; */
 /*акцент #2196F3; */
 
+/*  =================== Обьявление переменных =================== */
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -12,7 +14,7 @@
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: var(--link-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -24,11 +26,73 @@ a {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* webstudio index.html */
-/* Шапка */
-.header-title {
+/* =================== Стили для webstudio index.html ===================  */
+
+/*=================== Шапка ===================*/
+
+.container {
+  width: 1200px;
+  outline: 2px solid teal;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+/*
+.site-nav .item:last-child {
+  margin-right: 331px;
+}*/
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .link,
+.header-contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* ================== Герой ================== */
+.hero {
+  text-align: center;
+  height: 600px;
+  background-color: #2f303a;
+  padding-top: 200px;
+
+  outline: 2px solid red;
+}
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36em;
@@ -36,9 +100,12 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--link-color);
+
+  margin: 0;
+  margin-bottom: 30px;
 }
 
-.header-btn {
+.hero-btn {
   background-color: var(--accent-color);
   font-weight: 700;
   line-height: 1.87em;
@@ -47,9 +114,14 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
+  padding: 10px 32px;
 }
 
-/* Особенности */
+/*=================== Чем мы занимаемся ===================*/
+.feature-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .feature-title {
   font-weight: 700;
@@ -58,6 +130,8 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .feature-text {
@@ -66,32 +140,81 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Чем мы занимаемся */
-.what-we-do .title,
-.team > .title {
+.feature-list {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feture-list-item {
+  width: 230px;
+}
+
+.what-we-do-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17em;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  margin-bottom: 94px;
+}
+
+.what-we-do-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ====================== Наша команда ====================== */
+.team-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-main-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17em;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .team-title {
   font-weight: 500;
-  line-height: 1.19em;
+  font-size: 16px;
+  line-height: 1.188em;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
-.team p {
-  line-height: 1.19em;
+.team-item-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
   letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.team {
+  background-color: #f5f4fa;
 }
 
-/* portfolio.html */
+/* =================== Стили для portfolio.html =================== */
 
-/* Логотип */
+/* =================== Логотип =================== */
 .logo {
   color: var(--black-color);
   font-family: 'Raleway', sans-serif;
@@ -110,7 +233,7 @@ a {
   color: var(--accent-color);
 }
 
-/*site nav*/
+/*=================== Navigation ===================*/
 .link {
   color: var(--title-text-color);
   font-style: normal;
@@ -138,12 +261,29 @@ a {
   color: var(--accent-color);
 }
 
-/* Фильтры */
-.filters button {
+/* =================== Фильтры ===================*/
+.portfolio-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.btn {
   font-weight: 500;
   line-height: 1.63em;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
+  border: unset;
+}
+
+.filters .item:not(:last-child) {
+  margin-right: 9px;
 }
 
 .filters button:hover,
@@ -152,7 +292,22 @@ a {
   background-color: var(--accent-color);
 }
 
-/* Портфолио */
+/* =================== Портфолио =================== */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  outline: 2px solid teal;
+}
+
+.projects .item {
+  width: 370px;
+  margin-top: 30px;
+  margin-left: 30px;
+  outline: 2px solid black;
+}
+
 .title {
   font-weight: 700;
   font-size: 18px;
@@ -166,24 +321,42 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* footer */
-.footer-link {
-  color: var(--link-color);
+/* =================== Footer =================== */
+.footer {
+  background-color: #2f303a;
 }
 
-.footer .link {
+.footer-container {
+  height: 252px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-list .footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-link {
+  display: inline-block;
+  color: var(--link-color);
+  margin-bottom: 20px;
+}
+
+.footer-link-address {
   font-size: 14px;
   line-height: 1.71em;
   letter-spacing: 0.03em;
   color: var(--link-color);
 }
 
-.footer a[href='mailto:info@example.com'],
-.footer a[href='tel:+380991111111'] {
+.footer-link-contact {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.footer-link:hover,
+.footer-link-address:hover,
+.footer-link-contact:hover,
+.footer-link:focus,
+.footer-link-address:focus,
+.footer-link-contact:focus {
   color: var(--accent-color);
 }
