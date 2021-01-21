@@ -58,6 +58,12 @@ body {
   padding-right: 15px;
 }
 
+.page-header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -69,12 +75,11 @@ body {
 
 .logo-link {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .site-nav {
   display: flex;
+  align-items: center;
   margin-left: 93px;
 }
 
@@ -94,8 +99,6 @@ body {
 .site-nav .link,
 .header-contacts .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .link {
@@ -141,9 +144,9 @@ body {
 /* ================== Герой ================== */
 .hero {
   text-align: center;
-  height: 600px;
   background-color: #2f303a;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -154,8 +157,10 @@ body {
   text-transform: uppercase;
   color: var(--link-color);
 
-  margin: 0;
+  max-width: 620px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-btn {
@@ -170,37 +175,46 @@ body {
   padding: 10px 32px;
 }
 
-/*=================== Чем мы занимаемся ===================*/
-.feature-container {
+/*=================== Особенности ===================*/
+.features {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.feature-title {
+.features-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.feature-text {
+.features-text {
   font-size: 14px;
   line-height: 1.71em;
   letter-spacing: 0.03em;
 }
 
-.feature-list {
+.features-list {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
-.feture-list-item {
-  width: 230px;
+.fetures-list-item {
+  width: 270px;
+}
+
+/*=================== Чем мы занимаемся ===================*/
+
+.what-we-do {
+  padding-bottom: 94px;
 }
 
 .what-we-do-title {
@@ -219,7 +233,7 @@ body {
 }
 
 /* ====================== Наша команда ====================== */
-.team-container {
+.team {
   padding-top: 94px;
   padding-bottom: 94px;
   text-align: center;
@@ -240,13 +254,17 @@ body {
   margin-bottom: 50px;
 }
 
+.team-wraper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188em;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-top: 30px;
 }
 
 .team-item-text {
@@ -263,10 +281,6 @@ body {
 /* =================== Footer =================== */
 .footer {
   background-color: #2f303a;
-}
-
-.footer-container {
-  height: 252px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -294,7 +308,7 @@ body {
 /* =================== Стили для portfolio.html =================== */
 
 /* =================== Фильтры ===================*/
-.portfolio-container {
+.portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -336,6 +350,7 @@ body {
   width: 370px;
   margin-top: 30px;
   margin-left: 30px;
+  border: 1px solid #eeeeee;
 }
 
 .title {
@@ -344,7 +359,10 @@ body {
   line-height: 2em;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
-  margin-top: 20px;
+}
+
+.wraper {
+  padding: 20px 24px;
 }
 
 .subtitle {
