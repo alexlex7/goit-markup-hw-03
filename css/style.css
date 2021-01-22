@@ -61,7 +61,7 @@ body {
 .page-header {
   padding-top: 25px;
   padding-bottom: 25px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -177,11 +177,6 @@ body {
 
 /*=================== Особенности ===================*/
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.features-container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
